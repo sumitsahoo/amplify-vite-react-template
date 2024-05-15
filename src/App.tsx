@@ -6,11 +6,7 @@ import '@aws-amplify/ui-react/styles.css'
 
 import { signInWithRedirect } from 'aws-amplify/auth';
 
-await signInWithRedirect({
-  provider: {
-    custom: 'MicrosoftEntraID'
-  }
-});
+
 
 const client = generateClient<Schema>();
 
@@ -19,7 +15,11 @@ function App() {
 
   useEffect(() => {
 
-    signInWithRedirect();
+    signInWithRedirect({
+      provider: {
+        custom: 'MicrosoftEntraID'
+      }
+    });
 
     client.models.Todo.observeQuery().subscribe({
       next: (data) => setTodos([...data.items]),
