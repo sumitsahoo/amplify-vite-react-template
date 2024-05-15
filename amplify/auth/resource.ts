@@ -13,7 +13,7 @@ export const auth = defineAuth({
           name: 'MicrosoftEntraID',
           clientId: secret('MICROSOFT_ENTRA_ID_CLIENT_ID'),
           clientSecret: secret('MICROSOFT_ENTRA_ID_CLIENT_SECRET'),
-          issuerUrl: 'https://login.microsoftonline.com/15b03f79-c42c-4ded-981e-598b1d404bef/wsfed',
+          issuerUrl: 'https://login.microsoftonline.com/15b03f79-c42c-4ded-981e-598b1d404bef',
         },
       ],
       logoutUrls: ['http://localhost:3000/', 'https://mywebsite.com'],
